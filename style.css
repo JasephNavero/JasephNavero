@@ -1,0 +1,22 @@
+body{
+    background-color: #231123;
+  }
+  .text{
+    color: #798086
+  }
+  #name{}
+   #theparagraph{
+      color:#798086;
+    }
+  
+  #pronounce{
+    position: relative;
+    right: -80px;
+    top:-20px;
+  }
+  .interests{
+    position: fixed;
+    top: 90px;
+  }
+  .h{
+    color:#fe93c9}
