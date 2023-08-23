@@ -45,18 +45,27 @@ a {
 main {
   background: #f0e7d8;
   display: flex;
+  
 }
 .sidebar {
-  margin-right: 25px;
+  margin-right: 20px;
   padding: 10px;
 }
 .sidebar-img {
   width: 200px;
   align-self: safe;
+  border: 2px solid #ff3cc7;
+  animation: scrombingle 10s infinite;
+}
+@keyframes scrombingle {
+  10% {border-color: purple;}
+  20% {border-color: #7e1f63;}
+  30% {border-color: blueviolet;}
 }
 .content {
   flex: 1;
   padding: 15px;
+git 
 }
 
          /* portfolio styles */
