@@ -1,5 +1,5 @@
 body {
-  background: #0d0c1d;
+  background: rgb(125, 198, 205);
   color: rgb(45, 45, 45);
   padding: 10px;
   font-family: arial;
@@ -11,15 +11,15 @@ max-width: 800px;
 
 /* navigation menu */
 nav {
-  background: #ff3cc7;
- margin: 0 auto;
+  background: rgb(239, 80, 41);
+ margin-bottom: 20px;
   display: flex;
   padding: 10px;
 }
-h3 {
+h1 {
   display: flex;
   align-items: center;
-  color: #ff3cc7;
+  color: white;
   flex: 1;
   margin: 0;
 }
@@ -37,7 +37,7 @@ a {
 
 /* main container area beneath menu */
 main {
-  background: #f0e7d8;
+  background: rgb(245, 238, 219);
   display: flex;
 }
 .sidebar {
@@ -46,6 +46,7 @@ main {
 }
 .sidebar-img {
   width: 200px;
+  align-self: safe;
 }
 .content {
   flex: 1;
