@@ -18,17 +18,17 @@ nav {
 }
 h1 {
   display: flex;
-  align-items: center;
-  color: #ff3cc7;
-  flex: 1;
-  margin: 0;
+       align-items: center;
+       color: white;
+       flex: 1;
+       margin: 0;
 }
 #nav-ul {
   list-style-image: none;
-  margin-right: 00px;
-  margin-left: 640px;
+  margin-right: px;
+  margin-left: 0px;
   display: inline;
-  padding: 10px;
+  padding: 0px;
 }
 .nav-li {
   display: inline;
@@ -51,8 +51,8 @@ main {
 }
 .sidebar-img {
   width: 200px;
-  border: 2px inset #FBF8CC;
-  animation: scrombingle 2s infinite;
+  border: 10px inset #FBF8CC;
+  animation: scrombingle 500ms infinite;
 }
 @keyframes scrombingle {
   5% {border-color: #FBF8CC;}
@@ -100,7 +100,7 @@ h2, h3 {
 }
 
 #portfolio li {
-  background: #fff;
+  background: #FFCFD2;
   padding: 10px;
   border-radius: 10px;
   margin-bottom: 10px;
