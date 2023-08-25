@@ -46,6 +46,7 @@ a {
 main {
   background: #f0e7d8;
   display: flex;
+  animation: scrombingl 600s infinite;
 }
 .sidebar {
   margin-right: 25px;
@@ -111,7 +112,7 @@ h2, h3 {
 
 #portfolio li:hover {
   background: #eee;
-  animation: scrombingl 120s infinite;
+  animation: scrombingl 600s infinite;
 }
 @keyframes scrombingl {
   5% {background-color: #FBF8CC;}
