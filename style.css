@@ -111,6 +111,28 @@ h2, h3 {
 
 #portfolio li:hover {
   background: #eee;
+  animation: scrombingl 120s infinite;
+}
+@keyframes scrombingl {
+  5% {background-color: #FBF8CC;}
+  10% {background-color: #FDE4CF;}
+  15% {background-color: #FFCFD2;}
+  20% {background-color: #F1C0E8;}
+  25% {background-color: #CfBAF0;}
+  30% {background-color: #A3C4F3;}
+  35% {background-color: #90DBF4;}
+  40% {background-color: #8EECF5;}
+  45% {background-color: #98F5E1;}
+  50% {background-color: #B9FBC0;}
+  55% {background-color: #98F5E1;}
+  60% {background-color: #8EECF5;}
+  65% {background-color: #90DBF4;}
+  70% {background-color: #A3C4F3;}
+  80% {background-color: #CfBAF0;}
+  85% {background-color: #F1C0E8;}
+  90% {background-color: #FFCFD2;}
+  95% {background-color: #FDE4CF;}
+  100% {background-color: #FBF8CC;}
 }
 
 #portfolio a {
