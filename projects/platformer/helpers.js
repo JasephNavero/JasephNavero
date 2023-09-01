@@ -307,25 +307,16 @@ function resolveCollision(objx, objy, objw, objh) {
       player.onGround = true;
     }
   } else {
-    if (dx > 0 ) {
-      if (player.onGround=false)
+    if (dx > 0) {
       //left collision
       collisionDirection = "left";
       player.x = player.x + originx;
-      player.speedX = player.speedX*-1.05;
+      player.speedX = 0;
     } else {
-      if (player.onGround=false)
       //right collision
       collisionDirection = "right";
       player.x = player.x - originx;
-      player.speedX = player.speedX*-1.05;
-      if (keyPress.v)
-      player.x = player.x - originx - 40;
-      player.speedX = -player.speedX * (-1.2);
-      player.speedY = player.speedY + (player.speedY * 1.25);
-      
-      
-      
+      player.speedX = 0;
     }
   }
 
@@ -530,8 +521,8 @@ function collectablesCollide() {
   }
 }
 
-function createPlatform(x, y, width, height,) {
-  platforms.push({ x, y, width, height,});
+function createPlatform(x, y, width, height) {
+  platforms.push({ x, y, width, height });
 }
 
 function createCannon(
@@ -679,15 +670,9 @@ function keyboardControlActions() {
       jumpTimer = 19; //this counts how many frames to have the jump last.
       player.onGround = false; //bug fix for jump animation, you have to change this or the jump animation doesn't work
       frameIndex = 4;
-      
     }
   }
- 
-    }
-   
-    
-  
-
+}
 
 function handleKeyDown(e) {
   keyPress.any = true;
