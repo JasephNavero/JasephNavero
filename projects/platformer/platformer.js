@@ -43,8 +43,26 @@ $(function () {
     // Create platforms
     // You must decide the x position, y position, width, and height of the platforms
     // example usage: createPlatform(x,y,width,height)
+    
+    createPlatform(900, 590, 300, 10)
+    //bottom bait platform horizontal
+    createPlatform(800, 200, 20, 400)
+    //walljump right
+    createPlatform(1380, 0, 15, 800)
+    //BEEG WALL
+    createPlatform(1200, 600, 20, 60)
+    //walljump left
+    createPlatform(140, 700, 22, 80) 
+    //cheater ramp
 
-
+    //walljump right
+    createPlatform(1000, 0, 10, 400) 
+    //top platform to clip
+    createPlatform(510, 200, 370, 10)
+    // top platform left
+    createPlatform(0, 110, 360, 70)
+    //blocker box
+    createPlatform(1000, 100, 390, 100)
 
     
     // TODO 2
@@ -52,17 +70,23 @@ $(function () {
     // You must decide on the collectable type, the x position, the y position, the gravity, and the bounce strength
     // Your collectable choices are 'database' 'diamond' 'grace' 'kennedi' 'max' and 'steve'; more can be added if you wish
     // example usage: createCollectable(type, x, y, gravity, bounce)
-
-
-
+      createCollectable("max", 990, 0, 0,)
+      createCollectable("steve", 910, 0, 0,)
+      createCollectable("database", 500, 90, 0)
+      createCollectable("diamond", 100, 60, 0)
 
     // TODO 3
     // Create cannons
     // You must decide the wall you want the cannon on, the position on the wall, and the time between shots in milliseconds
     // Your wall choices are: 'top' 'left' 'right' and 'bottom'
     // example usage: createCannon(side, position, delay, width, height)
-
-
+    
+    //normal cannons
+    createCannon("top", 500, 1300 );
+    createCannon("left", 400, 240);
+    createCannon("left", 500, 240);
+    // insta death cannon
+    createCannon( 'left' ,0, 1920 , 2 , 10000);
 
 
     /////////////////////////////////////////////////
