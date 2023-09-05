@@ -430,6 +430,7 @@ function drawPlatforms() {
   }
 }
 
+
 function drawProjectiles() {
   for (var i = 0; i < projectiles.length; i++) {
     ctx.drawImage(

@@ -56,7 +56,7 @@ $(function () {
     //cheater ramp
 
     //walljump right
-    createPlatform(1000, 0, 10, 400) 
+    createPlatform(1010, 0, 30, 400) 
     //top platform to clip
     createPlatform(510, 200, 370, 10)
     // top platform left

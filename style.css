@@ -46,7 +46,7 @@ a {
 main {
   background: #f0e7d8;
   display: flex;
-  animation: scrombingl 600s infinite;
+  animation: scrombingl 1s infinite;
 }
 .sidebar {
   margin-right: 25px;
