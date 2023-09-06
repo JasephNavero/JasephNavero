@@ -60,7 +60,7 @@ $(function () {
     //top platform to clip
     createPlatform(510, 200, 370, 10)
     // top platform left
-    createPlatform(0, 110, 360, 70)
+    createPlatform(0, 110, 360, 70) 
     //blocker box
     createPlatform(1000, 100, 390, 100)
 

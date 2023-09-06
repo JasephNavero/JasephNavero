@@ -9,3 +9,6 @@ canvas {
 img {
   display: none;
 }
+section:createPlatform() {
+  color: darkorchid;
+}
