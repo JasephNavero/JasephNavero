@@ -421,7 +421,7 @@ function playerFrictionAndGravity() {
 
 function drawPlatforms() {
   for (var i = 0; i < platforms.length; i++) {
-    ctx.fillStyle = "indigo";
+    ctx.fillStyle = "rgba(54, 17, 52, 0.3)";
     ctx.fillRect(
       platforms[i].x,
       platforms[i].y,
