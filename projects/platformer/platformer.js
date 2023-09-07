@@ -71,7 +71,7 @@ $(function () {
     // Your collectable choices are 'database' 'diamond' 'grace' 'kennedi' 'max' and 'steve'; more can be added if you wish
     // example usage: createCollectable(type, x, y, gravity, bounce)
       createCollectable("max", 990, 0, 0,)
-      createCollectable("gunther", 910, 2, 6,)
+      createCollectable("gunther", 910, 0, 0,)
       createCollectable("database", 500, 90, 0)
       createCollectable("diamond", 100, 60, 0)
 
@@ -86,7 +86,7 @@ $(function () {
     createCannon("left", 400, 240);
     createCannon("left", 500, 240);
     // insta death cannon
-    createCannon( 'left' ,0, 1920 , 2 , 10000);
+    createCannon( 'left' ,0, 2000 , 2 , 10000);
 
 
     /////////////////////////////////////////////////
