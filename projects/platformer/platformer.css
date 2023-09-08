@@ -1,5 +1,6 @@
 body {
   margin: 0px;
+  background-color: darkorchid;
 }
 
 canvas {
@@ -8,7 +9,4 @@ canvas {
 
 img {
   display: none;
-}
-section:createPlatform() {
-  color: darkorchid;
 }
