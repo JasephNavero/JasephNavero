@@ -64,9 +64,7 @@ $(function () {
     //blocker box
     createPlatform(1000, 100, 390, 100)
     //fake blocker
-    createPlatform(270, 0, 4, 180)
-    //this platform uses a fault in the collision detection to essentially be cosmetic
-    
+   
     // TODO 2
     // Create collectables
     // You must decide on the collectable type, the x position, the y position, the gravity, and the bounce strength
