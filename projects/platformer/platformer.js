@@ -64,7 +64,7 @@ $(function () {
     //blocker box
     createPlatform(1000, 100, 390, 100)
     //fake blocker
-   
+    
     // TODO 2
     // Create collectables
     // You must decide on the collectable type, the x position, the y position, the gravity, and the bounce strength
