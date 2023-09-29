@@ -311,7 +311,7 @@ function resolveCollision(objx, objy, objw, objh) {
       if (player.onGround=false)
       //left collision
       collisionDirection = "left";
-      player.x = player.x + originx;
+      player.x = player.x + originx
       player.speedX = player.speedX*-1.05;
     } else {
       if (player.onGround=false)
@@ -319,10 +319,10 @@ function resolveCollision(objx, objy, objw, objh) {
       collisionDirection = "right";
       player.x = player.x - originx;
       player.speedX = player.speedX*-1.05;
-      if (keyPress.V)
-      player.x = player.x - originx - 40;
-      player.speedX = -player.speedX * (-1.2);
-      player.speedY = player.speedY + (player.speedY * 1.25);
+        if (keyPress.V)
+       player.x = player.x - originx - 40;
+       player.speedX = -player.speedX * (-1.2);
+       player.speedY = player.speedY + (player.speedY * 1.25);
       
       
       
@@ -679,6 +679,13 @@ function keyboardControlActions() {
       jumpTimer = 19; //this counts how many frames to have the jump last.
       player.onGround = false; //bug fix for jump animation, you have to change this or the jump animation doesn't work
       frameIndex = 4;
+  if (keyPress.space || keyPress.up) {
+     if (player.onGround) {
+      //this only lets you jump if you are on the ground
+       player.speedY = player.speedY - playerJumpStrength;
+       jumpTimer = 19; //this counts how many frames to have the jump last.
+       player.onGround = false; //bug fix for jump animation, you have to change this or the jump animation doesn't work
+         frameIndex = 4;
       
     }
   }

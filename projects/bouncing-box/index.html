@@ -62,8 +62,11 @@
 			//////////////////////////////////////////////////////////////////
 			
 			// TODO 2 - Variable declarations 
-			
-
+			var shmoinkledoink = 1;
+			var positionX = 0;
+			var score = 0;
+			var speed = 10;
+			var positionY = 100;
 			
 			/* 
 			This Function will be called 20 times/second. Each time it is called,
@@ -71,8 +74,13 @@
 			turn it around! 
 			*/
 			function update() {
+				positionX += speed;
+				moveBoxTo(positionX);
+				if (positionX > boardWidth || positionX < 0){
+				 speed *= -1;
+				 positionY += Math.floor(Math.random() * 100) + 1;
+				}
 				
-
 			};
 
 			/* 
@@ -80,10 +88,13 @@
 			it should increase the points total, increase the speed, and move the box to
 			the left side of the screen.
 			*/
+			
 			function handleBoxClick() {
+				positionX = 0;
+				changeBoxText(score)
+				score += 1;
+				speed += 3;
 				
-
-
 			};
 		})();
 	</script>
