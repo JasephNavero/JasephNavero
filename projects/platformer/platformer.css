@@ -1,9 +1,10 @@
 body {
   margin: 0px;
+  background-color: darkorchid;
 }
 
 canvas {
-  background-color: lightgray;
+  background-image:url(https://starwalk.space/gallery/images/what-is-space/1920x1080.jpg)
 }
 
 img {

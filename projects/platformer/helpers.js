@@ -309,11 +309,16 @@ function resolveCollision(objx, objy, objw, objh) {
   } else {
     if (dx > 0 ) {
       if (player.onGround=false)
+    if (dx > 0 ) {
+      if (player.onGround=false)
       //left collision
       collisionDirection = "left";
       player.x = player.x + originx
       player.speedX = player.speedX*-1.05;
+      player.x = player.x + originx;
+      player.speedX = player.speedX*-1.05;
     } else {
+      if (player.onGround=false)
       if (player.onGround=false)
       //right collision
       collisionDirection = "right";
@@ -418,9 +423,10 @@ function playerFrictionAndGravity() {
   }
 }
 
+
 function drawPlatforms() {
   for (var i = 0; i < platforms.length; i++) {
-    ctx.fillStyle = "grey";
+    ctx.fillStyle = "rgba(54, 17, 52, 0.9)";
     ctx.fillRect(
       platforms[i].x,
       platforms[i].y,
@@ -429,6 +435,7 @@ function drawPlatforms() {
     );
   }
 }
+
 
 function drawProjectiles() {
   for (var i = 0; i < projectiles.length; i++) {
