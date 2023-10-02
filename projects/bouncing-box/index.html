@@ -6,9 +6,10 @@
 	<script src="jquery.min.js"></script>
 	<style>
 		.box {
+			image: https://drive.google.com/file/d/1L2rgfW0Pd7j6nukpsW6pZyomT5mi2kc8/view?usp=drive_open&usp=embed_googleplus;
 			width: 70px;
 			height: 70px;
-			background-color: teal;
+			background-color: rgb(236, 6, 198);
 			font-size: 300%;
 			text-align: center;
 			user-select: none;
@@ -21,7 +22,7 @@
 			height: 100vh;
 		}
 	</style>
-	<!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
+	 	
 
 </head>
 <body class="board">
@@ -48,10 +49,17 @@
 			box.on('click', handleBoxClick);
 
 			// moves the Box to a new position on the screen along the X-Axis
+			
 			function moveBoxTo(newPositionX) {
 				box.css("left", newPositionX);
+			};
+			function moveBoxUp(newPositionY) {
+				box.css("top", newPositionY);
 			}
+			
+			
 
+			
 			// changes the text displayed on the Box
 			function changeBoxText(newText) {
 				box.text(newText);
@@ -62,10 +70,10 @@
 			//////////////////////////////////////////////////////////////////
 			
 			// TODO 2 - Variable declarations 
-			var shmoinkledoink = 1;
 			var positionX = 0;
 			var score = 0;
-			var speed = 10;
+			var speedX = 10;
+			var speedY = 10;
 			var positionY = 100;
 			
 			/* 
@@ -74,14 +82,18 @@
 			turn it around! 
 			*/
 			function update() {
-				positionX += speed;
+				positionX += speedX;
 				moveBoxTo(positionX);
+				moveBoxUp(positionY);
+				positionY += speedY;
 				if (positionX > boardWidth || positionX < 0){
-				 speed *= -1;
-				 positionY += Math.floor(Math.random() * 100) + 1;
+				 speedX *= -1;}
+				if (positionY > 900 || positionY < 0) {
+					speedY *= -1;
 				}
 				
-			};
+				
+			} 
 
 			/* 
 			This Function will be called each time the box is clicked. Each time it is called,
@@ -93,10 +105,11 @@
 				positionX = 0;
 				changeBoxText(score)
 				score += 1;
-				speed += 3;
+				speedX += 3;
+				speedY += 3;
 				
 			};
-		})();
+		}());
 	</script>
-</body>
+</body> 
 </html>
