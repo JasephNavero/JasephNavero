@@ -307,11 +307,7 @@ function resolveCollision(objx, objy, objw, objh) {
       player.onGround = true;
     }
   } else {
-    if (dx > 0 ) {
-      if (player.onGround=false)
-    if (dx > 0 ) {
-      if (player.onGround=false)
-      //left collision
+    if (dx > 0) {
       collisionDirection = "left";
       player.x = player.x + originx
       player.speedX = player.speedX*-1.05;
@@ -328,9 +324,6 @@ function resolveCollision(objx, objy, objw, objh) {
        player.x = player.x - originx - 40;
        player.speedX = -player.speedX * (-1.2);
        player.speedY = player.speedY + (player.speedY * 1.25);
-      
-      
-      
     }
   }
 
@@ -423,10 +416,9 @@ function playerFrictionAndGravity() {
   }
 }
 
-
 function drawPlatforms() {
   for (var i = 0; i < platforms.length; i++) {
-    ctx.fillStyle = "rgba(54, 17, 52, 0.9)";
+    ctx.fillStyle = "grey";
     ctx.fillRect(
       platforms[i].x,
       platforms[i].y,
@@ -435,7 +427,6 @@ function drawPlatforms() {
     );
   }
 }
-
 
 function drawProjectiles() {
   for (var i = 0; i < projectiles.length; i++) {
@@ -537,8 +528,8 @@ function collectablesCollide() {
   }
 }
 
-function createPlatform(x, y, width, height,) {
-  platforms.push({ x, y, width, height,});
+function createPlatform(x, y, width, height) {
+  platforms.push({ x, y, width, height });
 }
 
 function createCannon(
@@ -686,22 +677,9 @@ function keyboardControlActions() {
       jumpTimer = 19; //this counts how many frames to have the jump last.
       player.onGround = false; //bug fix for jump animation, you have to change this or the jump animation doesn't work
       frameIndex = 4;
-  if (keyPress.space || keyPress.up) {
-     if (player.onGround) {
-      //this only lets you jump if you are on the ground
-       player.speedY = player.speedY - playerJumpStrength;
-       jumpTimer = 19; //this counts how many frames to have the jump last.
-       player.onGround = false; //bug fix for jump animation, you have to change this or the jump animation doesn't work
-         frameIndex = 4;
-      
     }
   }
- 
-    }
-   
-    
-  
-
+}
 
 function handleKeyDown(e) {
   keyPress.any = true;
