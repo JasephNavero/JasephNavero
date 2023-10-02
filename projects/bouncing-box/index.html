@@ -8,7 +8,7 @@
 		.box {
 			width: 70px;
 			height: 70px;
-			background-color: teal;
+			background-color: rgb(236, 6, 198);
 			font-size: 300%;
 			text-align: center;
 			user-select: none;
@@ -21,7 +21,7 @@
 			height: 100vh;
 		}
 	</style>
-	<!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
+	 	
 
 </head>
 <body class="board">
@@ -48,10 +48,17 @@
 			box.on('click', handleBoxClick);
 
 			// moves the Box to a new position on the screen along the X-Axis
+			
 			function moveBoxTo(newPositionX) {
 				box.css("left", newPositionX);
+			};
+			function moveBoxUp(newPositionY) {
+				box.css("top", newPositionY);
 			}
+			
+			
 
+			
 			// changes the text displayed on the Box
 			function changeBoxText(newText) {
 				box.text(newText);
@@ -62,8 +69,11 @@
 			//////////////////////////////////////////////////////////////////
 			
 			// TODO 2 - Variable declarations 
-			
-
+			var positionX = 0;
+			var score = 0;
+			var speedX = 10;
+			var speedY = 10;
+			var positionY = 100;
 			
 			/* 
 			This Function will be called 20 times/second. Each time it is called,
@@ -71,21 +81,34 @@
 			turn it around! 
 			*/
 			function update() {
+				positionX += speedX;
+				moveBoxTo(positionX);
+				moveBoxUp(positionY);
+				positionY += speedY;
+				if (positionX > boardWidth || positionX < 0){
+				 speedX *= -1;}
+				if (positionY > 900 || positionY < 0) {
+					speedY *= -1;
+				}
 				
-
-			};
+				
+			} 
 
 			/* 
 			This Function will be called each time the box is clicked. Each time it is called,
 			it should increase the points total, increase the speed, and move the box to
 			the left side of the screen.
 			*/
+			
 			function handleBoxClick() {
+				positionX = 0;
+				changeBoxText(score)
+				score += 1;
+				speedX += 3;
+				speedY += 3;
 				
-
-
 			};
-		})();
+		}());
 	</script>
-</body>
+</body> 
 </html>
