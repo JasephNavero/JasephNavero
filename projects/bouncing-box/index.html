@@ -6,9 +6,12 @@
 	<script src="jquery.min.js"></script>
 	<style>
 		.box {
-			width: 70px;
-			height: 70px;
-			background-color: rgb(0, 0, 0);
+			width: 150px;
+			height: 150px;
+			animation: scrombingl 10s infinite;
+			
+			
+			background-size: cover;
 			font-size: 300%;
 			text-align: center;
 			user-select: none;
@@ -17,8 +20,30 @@
 			top: 100px;
 			left: 0px;  /* <--- Change me! */
 		}
+		@keyframes scrombingl {
+  5% {background-color: #ffee00;}
+  10% {background-color: #ff7300;}
+  15% {background-color: #ff0011;}
+  20% {background-color: #ff00d0;}
+  25% {background-color: #6000fc;}
+  30% {background-color: #006aff;}
+  35% {background-color: #00bfff;}
+  40% {background-color: #00eaff;}
+  45% {background-color: #00ffc8;}
+  50% {background-color: #00ff1a;}
+  55% {background-color: #00ffc8;}
+  60% {background-color: #00eaff;}
+  65% {background-color: #00bfff;}
+  70% {background-color: #006aff;}
+  80% {background-color: #6200ff;}
+  85% {background-color: #ff00d0;}
+  90% {background-color: #ff0011;}
+  95% {background-color: #ff7300;}
+  100% {background-color: #ffee00;}
+}
 		.board{
 			height: 100vh;
+			background-color: rgb(0,0,0)
 		}
 	</style>
 	 	
@@ -45,7 +70,7 @@
 			var boardWidth = board.width();	// the maximum X-Coordinate of the screen
 			var boardHeight = board.height();
 			// Every 50 milliseconds, call the update Function (see below)
-			setInterval(update, 5);
+			setInterval(update, 1);
 			
 			// Every time the box is clicked, call the handleBoxClick Function (see below)
 			box.on('click', handleBoxClick);
@@ -74,8 +99,8 @@
 			// TODO 2 - Variable declarations 
 			var positionX = 0;
 			var score = 0;
-			var speedX = 1;
-			var speedY = 1;
+			var speedX = 1/5;
+			var speedY = 1/5;
 			var positionY = 100;
 			
 			/* 
@@ -107,8 +132,8 @@
 				positionX = 0;
 				changeBoxText(score)
 				score += 1;
-				speedX += 0.3;
-				speedY += 0.3;
+				speedX += 0.3/5;
+				speedY += 0.3/5;
 				
 			};
 		}());
