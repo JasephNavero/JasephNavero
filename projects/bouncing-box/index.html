@@ -6,9 +6,9 @@
 	<script src="jquery.min.js"></script>
 	<style>
 		.box {
-			width: 150px;
+			width: 10px;
 			height: 150px;
-			animation: scrombingl 10s infinite;
+			animation: scrombingl 1s infinite;
 			
 			
 			background-size: cover;
@@ -69,11 +69,13 @@
 			var board = jQuery('.board');	// reference to the HTML .board element
 			var boardWidth = board.width();	// the maximum X-Coordinate of the screen
 			var boardHeight = board.height();
+			var sizescore = 150;
 			// Every 50 milliseconds, call the update Function (see below)
 			setInterval(update, 1);
 			
 			// Every time the box is clicked, call the handleBoxClick Function (see below)
-			box.on('click', handleBoxClick);
+			box.on('mousedown', handleBoxClick);
+			
 
 			// moves the Box to a new position on the screen along the X-Axis
 			
@@ -128,14 +130,21 @@
 			the left side of the screen.
 			*/
 			
+			
 			function handleBoxClick() {
 				positionX = 0;
 				changeBoxText(score)
 				score += 1;
 				speedX += 0.3/2;
 				speedY += 0.3/2;
-				
+				sizescore -= 1;
+				sizescore -= score;
 			};
+			
+			sizescore.toString;
+			box.css("height", sizescore);
+			box.css("width", sizescore);
+			
 		}());
 	</script>
 </body>
