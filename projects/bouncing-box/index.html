@@ -55,9 +55,7 @@
 	<div class="box">?</div>
 
 	<script>
-		var asdf = Math.random(1*256);
-		var sdf =  Math.random(1*256);
-		var fdas = Math.random(1*256);
+		
 		(function(){
 			'use strict'
 			/* global jQuery */
@@ -143,6 +141,7 @@
 				score += 1;
 				speedX += 0.3/2;
 				speedY += 0.3/2;
+				positionY = Math.floor(Math.random() * 800);
 				
 				
 			};
