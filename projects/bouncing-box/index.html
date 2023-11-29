@@ -46,16 +46,31 @@
 			height: 100vh;
 			background-color: rgb(0,0,0)
 		}
+.score {
+	
+	
+}
 	</style>
 	 	
 
 </head>
 <body class="board">
 	<!-- HTML for the box -->
-	<div class="box">?</div>
+	
 
+
+
+	<div class="box">?</div>
+	<div class="score">0</div>
+	<div class="time">60</div>
 	<script>
-		
+		//.score {
+		// height: 30px;
+		 // width: 200px;
+		 // background-color:#006aff;
+		 // display: block;
+		 // position: absolute; 
+		 // css properties for score
 		(function(){
 			'use strict'
 			/* global jQuery */
@@ -65,13 +80,15 @@
 			//////////////////////////////////////////////////////////////////
 			
 			var box = jQuery('.box');	// reference to the HTML .box element
-			var board = jQuery('.board');	// reference to the HTML .board element
+			var board = jQuery('.board');
+			var score = jQuery('.score');
+			var time = jQuery('.time');	// reference to the HTML .board element
 			var boardWidth = board.width();	// the maximum X-Coordinate of the screen
 			var boardHeight = board.height();
 			
 			// Every 50 milliseconds, call the update Function (see below)
 			setInterval(update, 1);
-			
+			setInterval(time, 1000);
 			// Every time the box is clicked, call the handleBoxClick Function (see below)
 			box.on('mousedown', handleBoxClick);
 			
@@ -85,12 +102,23 @@
 				box.css("top", newPositionY);
 			}
 			
-			
+			function changetimeText(newText) {
+				time.text(newText);
+			}
+			function time () {
+				time -= 1;
+				if (time <= 0) {
+
+				}
+			}
 
 			
 			// changes the text displayed on the Box
 			function changeBoxText(newText) {
 				box.text(newText);
+			}
+			function changescoreText(newText) {
+				score.text(newText);
 			}
 
 			//////////////////////////////////////////////////////////////////
@@ -115,12 +143,14 @@
 				moveBoxUp(positionY);
 				positionY += speedY;
 				if (positionX > boardWidth || positionX < 0){
-				 speedX *= -1;}
+				 speedX *= -1;
+				 score -= 1;
+				} 
 				if (positionY > boardHeight || positionY < 0) {
 					speedY *= -1;
 				}
 				var sizescore = 150-(score);
-			
+				changeBoxText(score);
 			
 			box.css("height",sizescore);
 			box.css("width",sizescore);
@@ -133,7 +163,7 @@
 			it should increase the points total, increase the speed, and move the box to
 			the left side of the screen.
 			*/
-			
+			var time = 60
 			
 			function handleBoxClick() {
 				positionX = 0;
@@ -142,9 +172,10 @@
 				speedX += 0.3/2;
 				speedY += 0.3/2;
 				positionY = Math.floor(Math.random() * 800);
+				changescoreText(score);
 				
-				
-			};
+			
+			}
 			
 			
 		}());

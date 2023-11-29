@@ -314,13 +314,13 @@ function resolveCollision(objx, objy, objw, objh) {
       player.x = player.x + originx;
       player.speedX = player.speedX*-1.05;
     } else {
-      if (player.onGround=false)
-      if (player.onGround=false)
+      
+      
       //right collision
       collisionDirection = "right";
       player.x = player.x - originx;
       player.speedX = player.speedX*-1.05;
-        if (keyPress.V)
+       
        player.x = player.x - originx - 40;
        player.speedX = -player.speedX * (-1.2);
        player.speedY = player.speedY + (player.speedY * 1.25);
@@ -720,7 +720,22 @@ function handleKeyUp(e) {
   if (e.key === " ") {
     keyPress.space = false;
   }
+  
 }
+function bigboom() {
+  player.speedY += 123;
+
+}
+canvas.on('mousedown', bigboom);
+//right collision
+//collisionDirection = "right";
+//player.x = player.x - originx;
+//player.speedX = player.speedX*-1.05;
+ 
+// player.x = player.x - originx - 40;
+ //player.speedX = -player.speedX * (-1.2);
+// player.speedY = player.speedY + (player.speedY * 1.25);
+
 
 function loadJson() {
   getJSON("halle.json", JsonFunction); //runs this before the setup because of timing things

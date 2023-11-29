@@ -87,7 +87,7 @@ $(function () {
     createCannon("left", 500, 240);
     // insta death cannon
     createCannon( 'left' ,0, 1920 , 2 , 10000);
-
+    
 
     /////////////////////////////////////////////////
     //////////ONLY CHANGE ABOVE THIS POINT///////////
