@@ -389,8 +389,12 @@ function deathOfPlayer() {
   );
   if (keyPress.any) {
     keyPress.any = false;
-    window.location.reload();
+    window.location.reload()
   }
+}
+
+if (keyPress.R) {
+  deathOfPlayer()
 }
 
 function playerFrictionAndGravity() {
