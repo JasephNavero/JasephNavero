@@ -1,0 +1,150 @@
+body {
+    background: #0d0c1d;
+    color: rgb(45, 45, 45);
+    padding: 10px;
+    font-family: arial;
+    max-width: 800px;
+    align-content: center;
+    margin: auto;
+  }
+  #all-contents {
+  max-width: 800px;
+    margin: auto;
+  }
+  #playlist {
+    padding: -10px;
+    background-color: #f0e7d8;
+    color: #161616;
+  }
+  /* navigation menu */
+  nav {
+    background: #161696;
+   margin: 0 auto;
+    display: flex;
+    padding: 10px;
+  }
+  h1 {
+    display: flex;
+    align-items: center;
+    color: #F1C0E8;
+    flex: 1;
+    margin: 0;
+  }
+  #nav-ul {
+    list-style-image: none;
+    margin-right: px;
+    margin-left: 0px;
+    display: inline;
+    padding: 0px;
+  }
+  .nav-li {
+    display: inline-block;
+    padding: 0 10px;
+  }
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  /* main container area beneath menu */
+  main {
+    background: #f0e7d8;
+    display: flex;
+    animation: scrombingl 1s infinite;
+  }
+  .sidebar {
+    margin-right: 25px;
+    padding: 10px;
+  }
+  .sidebar-img {
+    width: 200px;
+    border: 4px outset #FBF8CC;
+    animation: scrombingle 10s infinite;
+  }
+  @keyframes scrombingle {
+    5% {border-color: #FBF8CC;}
+    10% {border-color: #FDE4CF;}
+    15% {border-color: #FFCFD2;}
+    20% {border-color: #F1C0E8;}
+    25% {border-color: #CfBAF0;}
+    30% {border-color: #A3C4F3;}
+    35% {border-color: #90DBF4;}
+    40% {border-color: #8EECF5;}
+    45% {border-color: #98F5E1;}
+    50% {border-color: #B9FBC0;}
+    55% {border-color: #98F5E1;}
+    60% {border-color: #8EECF5;}
+    65% {border-color: #90DBF4;}
+    70% {border-color: #A3C4F3;}
+    80% {border-color: #CfBAF0;}
+    85% {border-color: #F1C0E8;}
+    90% {border-color: #FFCFD2;}
+    95% {border-color: #FDE4CF;}
+    100% {border-color: #FBF8CC;}
+  }
+  
+  .content {
+    flex: 1;
+    padding: 15px;
+  }
+  
+  /* portfolio styles */
+  #interests {
+    border: 4px silver ridge;
+    padding: 8px;
+  }
+  h2, h3 {
+    margin: 0px;
+  }
+  
+  /* portfolio styles */
+  .content h1 {
+    color: black;
+  }
+  
+  #portfolio {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  #portfolio li {
+    background: #FFCFD2;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  #portfolio li:hover {
+    background: #eee;
+    animation: scrombingl 1m infinite;
+  }
+  @keyframes scrombingl {
+    5% {background-color: #FBF8CC;}
+    10% {background-color: #FDE4CF;}
+    15% {background-color: #FFCFD2;}
+    20% {background-color: #F1C0E8;}
+    25% {background-color: #CfBAF0;}
+    30% {background-color: #A3C4F3;}
+    35% {background-color: #90DBF4;}
+    40% {background-color: #8EECF5;}
+    45% {background-color: #98F5E1;}
+    50% {background-color: #B9FBC0;}
+    55% {background-color: #98F5E1;}
+    60% {background-color: #8EECF5;}
+    65% {background-color: #90DBF4;}
+    70% {background-color: #A3C4F3;}
+    80% {background-color: #CfBAF0;}
+    85% {background-color: #F1C0E8;}
+    90% {background-color: #FFCFD2;}
+    95% {background-color: #FDE4CF;}
+    100% {background-color: #FBF8CC;}
+  }
+  
+  #portfolio a {
+    text-decoration: none;
+    color: #454545;
+  }
+  #output3 {
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
