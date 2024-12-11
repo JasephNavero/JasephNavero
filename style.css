@@ -30,6 +30,13 @@ h1 {
   flex: 1;
   margin: 0;
 }
+p {
+  display: flex;
+  align-items: center;
+  color: #F1C0E8;
+  flex: 1;
+  margin: 0;
+}
 #nav-ul {
   list-style-image: none;
   margin-right: px;
@@ -48,9 +55,9 @@ a {
 
 /* main container area beneath menu */
 main {
-  background: #f0e7d8;
+  background: #1b1531;
   display: flex;
-  animation: scrombingl 1s infinite;
+
 }
 .sidebar {
   margin-right: 25px;
